@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Network Status Indicator -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#F0F0F0"
+        android:padding="8dp">
+        
+        <View
+            android:id="@+id/networkStatusStatusIndicator"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@android:color/holo_red_dark" />
+            
+        <TextView
+            android:id="@+id/networkStatusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Offline / Outside Network"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Personnel Dashboard"
+        android:textSize="24sp"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/searchPersonnel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search personnel by name or role" />
+
+    <ListView
+        android:id="@+id/personnelListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:dividerHeight="1dp" />
+
+    <Button
+        android:id="@+id/toggleAvailability"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Toggle Availability (Currently: Available)" />
+
+</LinearLayout>
